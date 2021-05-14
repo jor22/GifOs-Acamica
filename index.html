@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,900;1,400&family=Roboto:ital,wght@0,400;0,700;0,900;1,500&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+		integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+	<link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="assets/logo-mobile.svg">
+
+    <title>GifOs</title>
+</head>
+<body>
+    <header class="header__container" id="header__container">
+        
+		<a class="logo__link" href="index.html"         id="logoSection"><img class="logo__imagen" id="logo"
+         src="assets/logo-desktop.svg" alt="Logo">
+        </a>
+
+
+        <nav class="navbar">
+             <img src="assets/burger.svg" alt="Menu hamburguesa" class="navbar__burguer" id="navbar__burger">
+
+
+            <ul class="navbar__list hiddenMenu" id="navbar__list">
+             <li class="navbar__list__item"><a href="" class="navbar__link" id="switchTheme">Modo Nocturno</a></li>
+             <li class="lines"></li>
+             <li><a id="FavoritosMenu" class="navbar__link" href="">Favoritos</a></li>
+             <li class="lines"></li>
+             <li><a class="navbar__link" href="" id="misGifosMenu">Mis GIFOS</a></li>
+             <li class="lines"></li>
+                <li class="navbar__list__item      hiddenMenu">
+                    <a href="" id="crearGifosMenu">
+                        <img class="navbar__createGif" id="crateGifBtn" src="assets/button-crear-gifo.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="topContainers" id="heroSection">
+
+	    <section class="heading__container">
+			<h1 class="hero__title">
+				Inspírate, busca, guarda y crea los mejores
+				<span class="aqua-text">GIFOS</span>
+			</h1>
+
+			<div class="search">
+				<img class="ilustra-header" src="assets/ilustra_header.svg" alt="" />
+
+				<div class="search__container" id="search__container">
+					<img class="search__btn hidden" id="search-gray-btn" src="assets/icon-search-gray.svg" alt="">
+					<input class="search__input" id="searchInput" type="text" placeholder="Busca GIFOS y más">
+					<img class="search__icon" id="search-icon" src="assets/icon-search.svg" alt="">
+					<img class="search-close-icon hidden" id="search-close-icon" src="assets/close.svg" alt="">
+				</div>
+			</div>
+
+			<div class="SearchSuggestions__container hidden" id="searchSuggestions__container">
+				<hr class="suggestions-line">
+				<ul class="search-sugestion-list" id="search-sugestion-list">
+				</ul>
+			</div>
+            
+			<section class="hero__trending">
+				<h4 class="hero__subtitle">Trending:</h4>
+
+				<p class="trendingTag_list" id="trendingTag_list">
+				</p>
+
+			</section>
+	    </section>
+
+		<section class="searchResult hidden" id="searchResult">
+
+			<hr class="search-line">
+			<h4 class="searchResult__title" id="searchResult__title">Titulo de búsqueda</h4>
+			<div class="errorContainer" id="error-container"></div>
+			<div class="searchResult__gallery" id="searchResult_gallery">
+			</div>
+
+			<a href="" class="button hidden" id="verMas-btn">VER MÁS</a>
+		</section>
+	</main>
+<!--  -->
+		<div class="hidden" id="maximizedGif"></div>
+
+		<section class="topContainers hidden" id="favorites-section">
+
+			<img src="assets/icon-favoritos.svg" alt="Imagen decorativa">
+			<h2 class="title">Favoritos</h2>
+	
+			<section class="empty__container hidden" id="noFavs_container">
+				<img class="empty__image" src="assets/icon-fav-sin-contenido.svg" alt="Imagen decorativa">
+				<h3 class="empty__text">¡Guarda tu primer GIFO en Favoritos <br>
+					para que se muestre aquí!</h3>
+			</section>
+	
+			<div class="searchResult">
+				<div class="searchResult__gallery hidden" id="fav-container">
+				</div>
+			</div>
+	
+		</section>
+
+
+		<section class="topContainers hidden" id="misGifosSection">
+
+			<img src="assets/icon-mis-gifos.svg" alt="Imagen decorativa">
+			<h2 class="title">Mis GIFOS</h2>
+	
+			<section class="empty__container" id="noGif_container">
+				<img class="empty__image" src="assets/icon-mis-gifos-sin-contenido.svg" alt="Imagen decorativa">
+				<h3 class="empty__text">¡Anímate a crear tu primer GIFO!</h3>
+			</section>
+	
+			<div class="searchResult">
+				<div class="searchResult__gallery" id="misGifos-container">
+				</div>
+			</div>
+	
+		</section>
+<!--  -->
+	
+	<section class="trending" id="trendingSection">
+		<h2 class="trending__title">Trending GIFOS</h2>
+		<p class="trending__paragraph">Mira los últimos GIFOS de nuestra comunidad</p>
+
+		<div class="trending__container">
+	
+			<div class="previous-btn arrows">
+				<img src="assets/button-slider-left.svg" alt="Flecha Previous" id="previous-btn">
+			</div>
+
+		
+			<div class="trending__slider--container">
+				<div class="trending__slider" id="trending__slider">
+				</div>
+			</div>
+
+			<div class="next-btn arrows">
+				<img src="assets/Button-Slider-right.svg" alt="Flecha Next" id="next-btn">
+			</div>
+
+		</div>
+
+	</section>
+
+	<footer class="footer">
+		<div class="footer__socialmediaContainer">
+			<p class="footer__paragraph">Compartir en:</p>
+			<div class="socialmedia">
+				<a class="socialmedia__item" href="facebook.com"><i class="fab fa-facebook-f"></i></a>
+				<a class="socialmedia__item" href="twitter.com"><i class="fab fa-twitter"></i></a>
+				<a class="socialmedia__item" href="instagram.com"><i class="fab fa-instagram"></i></a>
+			</div>
+		</div>
+		<p class="footer__paragraph">© GIFOS 2020 All Rights Reserved.</p>
+
+	</footer>
+</body>
+
+
+<script src="js/navbar.js"></script>
+<script src="js/search.js"></script>
+<script src="js/trending.js"></script>
+<script src="js/gif-functions.js"></script>
+<script src="js/dark-mode.js"></script>
+</html>
