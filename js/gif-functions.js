@@ -29,7 +29,7 @@ const displayFavoriteSection = (event) => {
 	event.preventDefault();
 	$heroSection.classList.add('hidden');
 	$misGifosSection.classList.add('hidden');
-	// $createGifSection.classList.add('hidden');
+	$createGifSection.classList.add('hidden');
 	$favSection.classList.remove('hidden');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 	displayFavoriteGifs();
@@ -76,71 +76,71 @@ const displayFavoriteGifs = () => {
 
 $favoritosMenu.addEventListener('click', displayFavoriteSection);
 
-// const displayMisGifosSection = (event) => {
-// 	event.preventDefault();
-// 	$misGifosSection.classList.remove('hidden');
-// 	$heroSection.classList.add('hidden');
-// 	$favSection.classList.add('hidden');
-// 	// $createGifSection.classList.add('hidden');
-// 	$trendingSection.classList.remove('hidden');
-// 	window.scrollTo({ top: 0, behavior: 'smooth' });
-// 	displayMiGifos();
+const displayMisGifosSection = (event) => {
+	event.preventDefault();
+	$misGifosSection.classList.remove('hidden');
+	$heroSection.classList.add('hidden');
+	$favSection.classList.add('hidden');
+	// $createGifSection.classList.add('hidden');
+	$trendingSection.classList.remove('hidden');
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+	displayMiGifos();
 
-// 	if (arrMyGifos == 0 || arrMyGifos == null) {
-// 		$noGifContainer.classList.remove('hidden');
-// 		$misGifosContainer.classList.add('hidden');
-// 	} else {
-// 		$noGifContainer.classList.add('hidden');
-// 		$misGifosContainer.classList.remove('hidden');
-// 	}
-// };
+	if (arrMyGifos == 0 || arrMyGifos == null) {
+		$noGifContainer.classList.remove('hidden');
+		$misGifosContainer.classList.add('hidden');
+	} else {
+		$noGifContainer.classList.add('hidden');
+		$misGifosContainer.classList.remove('hidden');
+	}
+};
 
 
-// $misGifosMenu.addEventListener('click', displayMisGifosSection);
+$misGifosMenu.addEventListener('click', displayMisGifosSection);
 
-// const displayMiGifos = () => {
-// 	$misGifosContainer.innerHTML = '';
+const displayMiGifos = () => {
+	$misGifosContainer.innerHTML = '';
 
-// 	arrMyGifos = JSON.parse(localStorage.getItem('MyGifs'));
+	arrMyGifos = JSON.parse(localStorage.getItem('MyGifs'));
 
-// 	console.log(arrMyGifos);
-// 	if (arrMyGifos == null) {
-// 		arrMyGifos = [];
-// 	} else {
-// 		for (let i = 0; i < arrMyGifos.length; i++) {
-// 			fetch(
-// 				`${getGifByIdEndpoint}?ids=${arrMyGifos[i]}&api_key=${apiKey}`
-// 			)
-// 				.then((response) => response.json())
-// 				.then((misGifosGiphy) => {
-// 					console.log(misGifosGiphy);
-// 					console.log(typeof misGifosGiphy.data[0].id);
+	console.log(arrMyGifos);
+	if (arrMyGifos == null) {
+		arrMyGifos = [];
+	} else {
+		for (let i = 0; i < arrMyGifos.length; i++) {
+			fetch(
+				`${getGifByIdEndpoint}?ids=${arrMyGifos[i]}&api_key=${apiKey}`
+			)
+				.then((response) => response.json())
+				.then((misGifosGiphy) => {
+					console.log(misGifosGiphy);
+					console.log(typeof misGifosGiphy.data[0].id);
 
-// 					const gifContainer = document.createElement('div');
-// 					gifContainer.classList.add('gif__container');
-// 					gifContainer.innerHTML = `
-// 					<img class="gif" src="${misGifosGiphy.data[0].images.original.url}" alt="Gif Creado por el usuario">
+					const gifContainer = document.createElement('div');
+					gifContainer.classList.add('gif__container');
+					gifContainer.innerHTML = `
+					<img class="gif" src="${misGifosGiphy.data[0].images.original.url}" alt="Gif Creado por el usuario">
 
-// 					<div class="gifActions">
-// 						<div class="gifActions__btn">
-// 							<div class="btn remove" onclick="removeMyGifos('${misGifosGiphy.data[0].id}')"></div>
-// 							<div class="btn download" onclick="downloadGif('${misGifosGiphy.data[0].images.original.url}','Gif')"></div>
-// 							<div class="btn maximize" onclick="maximizeFavoriteGif('${misGifosGiphy.data[0].images.original.url}','User','Gif')"></div>
-// 						</div>
-// 						<div class="gif__info">
-// 							<p class="gif_user">User</p>
-// 							<p class="gif_title">Gif</p>
-// 						</div>
-// 					</div>
-// 					`;
-// 					$misGifosContainer.appendChild(gifContainer);
-// 				})
-// 				.catch((err) => {
-// 					console.error(err);
-// 				});
-// 		}
-// 	}
-// };
+					<div class="gifActions">
+						<div class="gifActions__btn">
+							<div class="btn remove" onclick="removeMyGifos('${misGifosGiphy.data[0].id}')"></div>
+							<div class="btn download" onclick="downloadGif('${misGifosGiphy.data[0].images.original.url}','Gif')"></div>
+							<div class="btn maximize" onclick="maximizeFavoriteGif('${misGifosGiphy.data[0].images.original.url}','User','Gif')"></div>
+						</div>
+						<div class="gif__info">
+							<p class="gif_user">User</p>
+							<p class="gif_title">Gif</p>
+						</div>
+					</div>
+					`;
+					$misGifosContainer.appendChild(gifContainer);
+				})
+				.catch((err) => {
+					console.error(err);
+				});
+		}
+	}
+};
 
 
 
@@ -227,16 +227,16 @@ const removeGif = (gif) => {
 	}
 };
 
-// const removeMyGifos = (gif) => {
-// 	event.preventDefault();
-// 	let arrMyGifosParsed = JSON.parse(localStorage.getItem('MyGifs'));
-// 	console.log(arrMyGifosParsed);
-// 	for (let i = 0; i < arrMyGifosParsed.length; i++) {
-// 		if (arrMyGifosParsed[i] == gif) {
-// 			arrMyGifosParsed.splice(i, 1);
-// 			localStorage.setItem('MyGifs', JSON.stringify(arrMyGifosParsed));
-// 			displayMisGifosSection(event);
-// 			closeMaximized();
-// 		}
-// 	}
-// };
+const removeMyGifos = (gif) => {
+	event.preventDefault();
+	let arrMyGifosParsed = JSON.parse(localStorage.getItem('MyGifs'));
+	console.log(arrMyGifosParsed);
+	for (let i = 0; i < arrMyGifosParsed.length; i++) {
+		if (arrMyGifosParsed[i] == gif) {
+			arrMyGifosParsed.splice(i, 1);
+			localStorage.setItem('MyGifs', JSON.stringify(arrMyGifosParsed));
+			displayMisGifosSection(event);
+			closeMaximized();
+		}
+	}
+};

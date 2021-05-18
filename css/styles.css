@@ -111,6 +111,8 @@
     padding-top: 30%;
     position: relative;
     text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
   }
 
   .heading__container {
@@ -456,290 +458,6 @@ body.darkMode .footer .socialmedia .socialmedia__item:hover {
   display: none;
 }
 
-@media screen and (min-width: 400px) {
-  .gif__container .gif {
-    margin: 1rem;
-    width: 10rem;
-    height: 8rem;
-  }
-}
-
-  @media screen and (min-width: 500px) {
-    .topContainers {
-      padding-top: 10%;
-    }
-  }
-  
-  @media screen and (min-width: 768px) {
-    .logo__link .logo__imagen {
-      width: 3.7rem;
-    }
-    .header__container{
-      position: relative;
-    }
-    
-
-    .navbar__burguer {
-        display: none;
-      }
-
-      .navbar .lines {
-        display: none;
-      }
-
-      .navbar__list {
-        height: 100%;
-        position: relative;
-        top: 0;
-        right: 0;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        gap: 20px;
-        background-color: transparent;
-      }
-      body.darkMode .navbar__list {
-        background-color: transparent;
-      }
-
-      .navbar__link {
-        width: -webkit-fit-content;
-        width: -moz-fit-content;
-        width: fit-content;
-        padding-top: 1rem;
-        line-height: 1.5rem;
-        color: #572ee5;
-        text-transform: uppercase;
-      }
-      .navbar__link:hover {
-        border-bottom: 2px solid #50e3c2;
-      }
-      .navbar__link:active {
-        color: #9cafc3;
-        border-bottom: hidden;
-      }
-
-      .hiddenMenu {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-      }
-    
-    
-    .hiddenSearchBar {
-      display: none;
-    }
-    
-    .topContainers {
-      padding: 5%;
-      padding-top: 5%;
-      position: relative;
-      text-align: center;
-    }
-    .hero__title {
-      font-size: 2em;
-      max-width: 85%;
-      margin: 0 auto;
-    }
-
-    .ilustra-header {
-      width: 60%;
-    }
-
-    .search__container {
-      width: 55%;
-    }
-    .SearchSuggestions__container {
-      width: 55%;
-    }
-
-    .searchResult__gallery {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-    }
-
-    .error__container {
-      margin: 5rem;
-    }
-
-    .gif__container .gif {
-      width: 14rem;
-      height: 11rem;
-    }
-    .gif__container .gifActions {
-      margin: 1rem;
-      display: block;
-      opacity: 0;
-      width: 14rem;
-      height: 11rem;
-      position: absolute;
-      top: 0;
-      background-color: rgba(87, 46, 229, 0.6);
-      -webkit-transition: 0.2s ease-in-out;
-      transition: 0.2s ease-in-out;
-    }
-    .gif__container .gifActions:hover {
-      opacity: 100;
-    }
-    .gif__container .gifActions__btn {
-      width: 8rem;
-      padding: 4%;
-      position: absolute;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      right: 0;
-    }
-    .gif__container .gifActions__btn .btn {
-      width: 2rem;
-      height: 2rem;
-      cursor: pointer;
-    }
-    .gif__container .favorite {
-      background: url("/assets/icon-fav.svg") center no-repeat;
-    }
-    .gif__container .favorite:hover {
-      background: url("/assets/icon-fav-hover.svg") center no-repeat;
-    }
-    .gif__container .favorite:active {
-      background: url("/assets/icon-fav-active.svg") center no-repeat;
-    }
-    .gif__container .download {
-      background: url("/assets/icon-download.svg") center no-repeat;
-    }
-    .gif__container .download:hover {
-      background: url("/assets/icon-download-hover.svg") center no-repeat;
-    }
-    .gif__container .maximize {
-      background: url("/assets/icon-max-normal.svg") center no-repeat;
-    }
-    .gif__container .maximize:hover {
-      background: url("/assets/icon-max-hover.svg") center no-repeat;
-    }
-    .gif__container .remove {
-      background: url("/assets/icon-trash-normal.svg") center no-repeat;
-    }
-    .gif__container .remove:hover {
-      background: url("/assets/icon-trash-hover.svg") center no-repeat;
-    }
-    .gif__container .gif__info {
-      position: absolute;
-      left: 8%;
-      bottom: 15%;
-      font-weight: 500;
-      text-align: left;
-      color: #fff;
-    }
-    .trending__container .trending__slider {
-      overflow: hidden;
-    }
-    .trending__container .arrows {
-      display: block;
-      padding: 1rem;
-      width: 10%;
-    }
-    .trending {
-      padding: 12% 0 8% 0;
-    }
-
-    .footer {
-      height: 15vh;
-      padding: 4rem 8rem 4rem 8rem;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      border-bottom: 5px solid #572ee5;
-    }
-
-    .footer__paragraph {
-      padding: 0;
-    }
-    .footer .footer__socialmediaContainer {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-    }
-
-  }
-
-  /*  */
-  @media screen and (min-width: 1024px) {
-    .hero__title {
-      font-size: 2.5em;
-    }
-    .search__container {
-      width: 75%;
-    }
-    .SearchSuggestions__container {
-      width: 75%;
-    }
-
-    .gif__container .gif {
-      width: 17rem;
-      height: 14rem;
-    }
-    .gif__container .gifActions {
-      width: 17rem;
-      height: 14rem;
-    }
-
-    .trending {
-      padding: 10% 0 8% 0;
-    }
-
-  }
-
-  
-@media screen and (min-width: 1530px) {
-  .gif__container .gif {
-    width: 22rem;
-    height: 16rem;
-  }
-  .gif__container .gifActions {
-    width: 22rem;
-    height: 16rem;
-  }
-  .trending {
-    padding: 8% 0 8% 0;
-  }
-}
-
-topContainers {
-  padding-top: 30%;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-}
-
-@media screen and (min-width: 400px) {
-  .topContainers {
-    padding-top: 7%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .topContainers {
-    padding-top: 7%;
-  }
-}
-
-@media screen and (min-width: 1530px) {
-  .topContainers {
-    padding-top: 7%;
-  }
-}
-
 .title {
   margin-top: 0.5rem;
   margin-bottom: 2.8rem;
@@ -759,18 +477,6 @@ topContainers {
 .crearGif {
   padding-top: 12%;
   position: relative;
-}
-
-@media screen and (min-width: 1280px) {
-  .crearGif {
-    padding-top: 10%;
-  }
-}
-
-@media screen and (min-width: 1530px) {
-  .crearGif {
-    padding-top: 9%;
-  }
 }
 
 .crearGif__container {
@@ -1025,124 +731,6 @@ body.darkMode .crearGif .pagination .step {
   border: 2px solid #572ee5;
 }
 
-.gif__container {
-  position: relative;
-}
-
-.gif__container .gif {
-  margin: 0.5rem;
-  width: 8rem;
-  height: 6rem;
-}
-
-.gif__container .gifActions {
-  display: none;
-}
-
-@media screen and (min-width: 400px) {
-  .gif__container .gif {
-    margin: 1rem;
-    width: 10rem;
-    height: 8rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .gif__container .gif {
-    width: 14rem;
-    height: 11rem;
-  }
-  .gif__container .gifActions {
-    margin: 1rem;
-    display: block;
-    opacity: 0;
-    width: 14rem;
-    height: 11rem;
-    position: absolute;
-    top: 0;
-    background-color: rgba(87, 46, 229, 0.6);
-    -webkit-transition: 0.2s ease-in-out;
-    transition: 0.2s ease-in-out;
-  }
-  .gif__container .gifActions:hover {
-    opacity: 100;
-  }
-  .gif__container .gifActions__btn {
-    width: 8rem;
-    padding: 4%;
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    right: 0;
-  }
-  .gif__container .gifActions__btn .btn {
-    width: 2rem;
-    height: 2rem;
-    cursor: pointer;
-  }
-  .gif__container .favorite {
-    background: url("/assets/icon-fav.svg") center no-repeat;
-  }
-  .gif__container .favorite:hover {
-    background: url("/assets/icon-fav-hover.svg") center no-repeat;
-  }
-  .gif__container .favorite:active {
-    background: url("/assets/icon-fav-active.svg") center no-repeat;
-  }
-  .gif__container .download {
-    background: url("/assets/icon-download.svg") center no-repeat;
-  }
-  .gif__container .download:hover {
-    background: url("/assets/icon-download-hover.svg") center no-repeat;
-  }
-  .gif__container .maximize {
-    background: url("/assets/icon-max-normal.svg") center no-repeat;
-  }
-  .gif__container .maximize:hover {
-    background: url("/assets/icon-max-hover.svg") center no-repeat;
-  }
-  .gif__container .remove {
-    background: url("/assets/icon-trash-normal.svg") center no-repeat;
-  }
-  .gif__container .remove:hover {
-    background: url("/assets/icon-trash-hover.svg") center no-repeat;
-  }
-  .gif__container .gif__info {
-    position: absolute;
-    left: 8%;
-    bottom: 15%;
-    font-weight: 500;
-    text-align: left;
-    color: #fff;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .gif__container .gif {
-    width: 17rem;
-    height: 14rem;
-  }
-  .gif__container .gifActions {
-    width: 17rem;
-    height: 14rem;
-  }
-}
-
-@media screen and (min-width: 1530px) {
-  .gif__container .gif {
-    width: 22rem;
-    height: 16rem;
-  }
-  .gif__container .gifActions {
-    width: 22rem;
-    height: 16rem;
-  }
-}
-
 .maximizedGif {
   width: 100%;
   height: 100%;
@@ -1196,12 +784,6 @@ body.darkMode .close-btn {
   font-size: 14px;
 }
 
-@media screen and (min-width: 768px) {
-  .gif__info {
-    font-size: 16px;
-  }
-}
-
 body.darkMode .gif__info {
   color: #fff;
 }
@@ -1240,13 +822,6 @@ body.darkMode .gif__info {
   padding: 0.8rem;
   margin: 2px;
   cursor: pointer;
-}
-
-@media screen and (min-width: 768px) {
-  .buttonsMax {
-    width: 2rem;
-    height: 2rem;
-  }
 }
 
 .downloadMax {
@@ -1291,4 +866,271 @@ body.darkMode .gif__info {
 
 .downloadOverlay:hover {
   background: url("/assets/icon-download-hover.svg") center no-repeat;
+}
+
+
+/* ---------------------------------------------------------------------------- */
+
+@media screen and (min-width: 400px) {
+  .gif__container .gif {
+    margin: 1rem;
+    width: 10rem;
+    height: 8rem;
+  }
+
+  .topContainers {
+    padding-top: 7%;
+  }
+  
+}
+  
+  @media screen and (min-width: 768px) {
+    .logo__link .logo__imagen {
+      width: 3.7rem;
+    }
+    .header__container{
+      position: relative;
+    }
+    
+
+    .navbar__burguer {
+        display: none;
+      }
+
+      .navbar .lines {
+        display: none;
+      }
+
+      .navbar__list {
+        height: 100%;
+        position: relative;
+        top: 0;
+        right: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        gap: 20px;
+        background-color: transparent;
+      }
+      body.darkMode .navbar__list {
+        background-color: transparent;
+      }
+
+      .navbar__link {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        padding-top: 1rem;
+        line-height: 1.5rem;
+        color: #572ee5;
+        text-transform: uppercase;
+      }
+      .navbar__link:hover {
+        border-bottom: 2px solid #50e3c2;
+      }
+      .navbar__link:active {
+        color: #9cafc3;
+        border-bottom: hidden;
+      }
+
+      .hiddenMenu {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+    
+    
+    .hiddenSearchBar {
+      display: none;
+    }
+    
+    .topContainers {
+      padding: 5%;
+      padding-top: 5%;
+      position: relative;
+      text-align: center;
+    }
+    .hero__title {
+      font-size: 2em;
+      max-width: 85%;
+      margin: 0 auto;
+    }
+
+    .ilustra-header {
+      width: 60%;
+    }
+
+    .search__container {
+      width: 55%;
+    }
+    .SearchSuggestions__container {
+      width: 55%;
+    }
+
+    .searchResult__gallery {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+    }
+
+    .error__container {
+      margin: 5rem;
+    }
+
+    .gif__container .gif {
+      width: 14rem;
+      height: 11rem;
+    }
+    .gif__container .gifActions {
+      margin: 1rem;
+      display: block;
+      opacity: 0;
+      width: 14rem;
+      height: 11rem;
+      position: absolute;
+      top: 0;
+      background-color: rgba(87, 46, 229, 0.6);
+      -webkit-transition: 0.2s ease-in-out;
+      transition: 0.2s ease-in-out;
+    }
+    .gif__container .gifActions:hover {
+      opacity: 100;
+    }
+    .gif__container .gifActions__btn {
+      width: 8rem;
+      padding: 4%;
+      position: absolute;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      right: 0;
+    }
+    .gif__container .gifActions__btn .btn {
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+    }
+    .gif__container .favorite {
+      background: url("/assets/icon-fav.svg") center no-repeat;
+    }
+    .gif__container .favorite:hover {
+      background: url("/assets/icon-fav-hover.svg") center no-repeat;
+    }
+    .gif__container .favorite:active {
+      background: url("/assets/icon-fav-active.svg") center no-repeat;
+    }
+    .gif__container .download {
+      background: url("/assets/icon-download.svg") center no-repeat;
+    }
+    .gif__container .download:hover {
+      background: url("/assets/icon-download-hover.svg") center no-repeat;
+    }
+    .gif__container .maximize {
+      background: url("/assets/icon-max-normal.svg") center no-repeat;
+    }
+    .gif__container .maximize:hover {
+      background: url("/assets/icon-max-hover.svg") center no-repeat;
+    }
+    .gif__container .remove {
+      background: url("/assets/icon-trash-normal.svg") center no-repeat;
+    }
+    .gif__container .remove:hover {
+      background: url("/assets/icon-trash-hover.svg") center no-repeat;
+    }
+    .gif__container .gif__info {
+      position: absolute;
+      left: 8%;
+      bottom: 15%;
+      font-weight: 500;
+      text-align: left;
+      color: #fff;
+    }
+    .trending__container .trending__slider {
+      overflow: hidden;
+    }
+    .trending__container .arrows {
+      display: block;
+      padding: 1rem;
+      width: 10%;
+    }
+    .trending {
+      padding: 12% 0 8% 0;
+    }
+
+    .footer {
+      height: 15vh;
+      padding: 4rem 8rem 4rem 8rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      border-bottom: 5px solid #572ee5;
+    }
+
+    .footer__paragraph {
+      padding: 0;
+    }
+    .footer .footer__socialmediaContainer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+  }
+
+  @media screen and (min-width: 1024px) {
+    .hero__title {
+      font-size: 2.5em;
+    }
+    .search__container {
+      width: 75%;
+    }
+    .SearchSuggestions__container {
+      width: 75%;
+    }
+
+    .gif__container .gif {
+      width: 17rem;
+      height: 14rem;
+    }
+    .gif__container .gifActions {
+      width: 17rem;
+      height: 14rem;
+    }
+
+    .trending {
+      padding: 10% 0 8% 0;
+    }
+
+    .crearGif {
+      padding-top: 10%;
+    }
+
+  }
+
+@media screen and (min-width: 1530px) {
+  .gif__container .gif {
+    width: 22rem;
+    height: 16rem;
+  }
+  .gif__container .gifActions {
+    width: 22rem;
+    height: 16rem;
+  }
+  .trending {
+    padding: 8% 0 8% 0;
+  }
+
+  .crearGif {
+    padding-top: 9%;
+  }
 }

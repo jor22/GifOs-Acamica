@@ -70,7 +70,7 @@ setCrearButton();
 
 const displayCreateGifSection = (event) => {
 	event.preventDefault();
-	// $createGifSection.classList.remove('hidden');
+	$createGifSection.classList.remove('hidden');
 	$heroSection.classList.add('hidden');
 	$favSection.classList.add('hidden');
 	$trendingSection.classList.add('hidden');
@@ -84,7 +84,7 @@ const displayMainSection = (event) => {
 	$heroSection.classList.remove('hidden');
 	$misGifosSection.classList.add('hidden');
 	$favSection.classList.add('hidden');
-	// $createGifSection.classList.add('hidden');
+	$createGifSection.classList.add('hidden');
 	$trendingSection.classList.remove('hidden');
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 };
